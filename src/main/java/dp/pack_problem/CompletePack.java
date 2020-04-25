@@ -24,7 +24,7 @@ public class CompletePack {
     }
 
     // 将每个背包的逻辑单独抽取出来
-    private void single(int[] F, int c, int w, int V) {
+    public void single(int[] F, int c, int w, int V) {
         for (int v = c; v <= V; v++) {
             F[v] = max(F[v], F[v - c] + w);
         }

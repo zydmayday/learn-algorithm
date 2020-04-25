@@ -61,4 +61,10 @@ public class ZeroOnePack {
         return F[V];
     }
 
+    public void single(int[] F, int C, int W, int V) {
+        for (int v = V; v >= C; v--) {
+            F[v] = max(F[v], F[v - C] + W);
+        }
+    }
+
 }

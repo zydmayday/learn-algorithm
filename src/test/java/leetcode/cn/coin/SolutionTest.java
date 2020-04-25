@@ -16,5 +16,6 @@ public class SolutionTest {
     void test(int expected, int n) {
         Solution solution = new Solution();
         assertEquals(expected, solution.waysToChange(n));
+        assertEquals(expected, solution.solution(n));
     }
 }
