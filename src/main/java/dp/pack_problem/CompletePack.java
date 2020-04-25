@@ -1,5 +1,7 @@
 package dp.pack_problem;
 
+import java.util.Arrays;
+
 import static java.lang.Integer.max;
 
 //完全背包问题
@@ -15,10 +17,26 @@ public class CompletePack {
 
     public int solution1(int[] C, int[] W, int V) {
         int[] F = new int[V + 1];
+        int[][] G = new int[C.length][V + 1];
         for (int i = 0; i < C.length; i++) {
             for (int v = C[i]; v <= V; v++) {
+                int prev = F[v];
                 F[v] = max(F[v], F[v - C[i]] + W[i]);
+                if (prev != F[v]) {
+                    // 当我们使用了第i件物品的时候，
+                    // 那么我们实际上就是使用了G[0-C.length][v - C[i]]时的选择，
+                    // 再加上选择了第i件物品
+                    for (int k = 0; k < G.length; k++) {
+                        G[k][v] = G[k][v - C[i]];
+                        if (k == i) G[k][v]++;
+                    }
+                }
             }
+        }
+        System.out.println(Arrays.deepToString(G));
+        // 最终选择的结果是G[0-C.length][v]
+        for (int[] g : G) {
+            System.out.print(g[g.length - 1]);
         }
         return F[V];
     }
@@ -26,7 +44,8 @@ public class CompletePack {
     // 将每个背包的逻辑单独抽取出来
     public void single(int[] F, int c, int w, int V) {
         for (int v = c; v <= V; v++) {
-            F[v] = max(F[v], F[v - c] + w);
+            int prev = F[v];
+            F[v] = max(prev, F[v - c] + w);
         }
     }
 

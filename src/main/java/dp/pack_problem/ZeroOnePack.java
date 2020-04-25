@@ -53,11 +53,16 @@ public class ZeroOnePack {
      */
     public int solution2(int[] C, int[] W, int V) {
         int[] F = new int[V + 1];
+        int[] G = new int[C.length]; // 记录选择
         for (int i = 0; i < C.length; i++) {
             for (int v = V; v >= C[i]; v--) {
-                F[v] = max(F[v], F[v - C[i]] + W[i]);
+                int prev = F[v];
+                F[v] = max(prev, F[v - C[i]] + W[i]);
+                if (prev == F[v]) G[i] = 0;
+                else G[i] = 1;
             }
         }
+        System.out.println(Arrays.toString(G));
         return F[V];
     }
 
