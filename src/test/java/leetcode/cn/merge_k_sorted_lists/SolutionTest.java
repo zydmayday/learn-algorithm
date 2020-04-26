@@ -23,7 +23,7 @@ public class SolutionTest {
 
         Solution solution = new Solution();
         ListNode[] lists = new ListNode[]{l11, l21, l3};
-        ListNode ans = solution.mergeKLists(lists);
+        ListNode ans = solution.mergeKLists2(lists);
         int i = 0;
         int[] expected = new int[]{1, 1, 2, 3, 4, 4, 5, 6};
         while (ans != null) {
@@ -45,7 +45,7 @@ public class SolutionTest {
 
         Solution solution = new Solution();
         ListNode[] lists = new ListNode[]{l11, l21};
-        ListNode ans = solution.mergeKLists(lists);
+        ListNode ans = solution.mergeKLists2(lists);
         int i = 0;
         int[] expected = new int[]{-2, -1, -1, -1};
         while (ans != null) {
@@ -59,7 +59,7 @@ public class SolutionTest {
 
         Solution solution = new Solution();
         ListNode[] lists = new ListNode[]{null};
-        ListNode ans = solution.mergeKLists(lists);
+        ListNode ans = solution.mergeKLists2(lists);
         int i = 0;
         int[] expected = new int[]{};
         while (ans != null) {
