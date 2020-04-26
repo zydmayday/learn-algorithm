@@ -2,7 +2,7 @@ package leetcode.cn.coin;
 
 import java.util.Arrays;
 
-import static java.lang.Integer.max;
+import static java.lang.Integer.sum;
 
 /*
 硬币。给定数量不限的硬币，币值为25分、10分、5分和1分，编写代码计算n分有几种表示法。(结果可能会很大，你需要将结果模上1000000007)
@@ -30,12 +30,13 @@ public class Solution {
     public int solution(int n) {
         int[] coins = new int[]{1, 5, 10, 25};
         int[] F = new int[n + 1];
-        for (int i = 0; i < coins.length; i++) {
-            for (int c = coins[i]; c <= n; c++) {
-                F[c] = max(F[c], F[c - coins[i]] + 1);
+        F[0] = 1;
+        for (int c : coins) {
+            for (int v = c; v <= n; v++) {
+                F[v] = sum(F[v], F[v - c]) % 1_000_000_007;
             }
         }
-        System.out.println(Arrays.toString(F));
+//        System.out.println(Arrays.toString(F));
         return F[n];
     }
 
