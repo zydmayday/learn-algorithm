@@ -1,5 +1,7 @@
-package leetcode.cn.merge_k_sorted_lists;
+package leetcode.cn.linkedlist.merge_k_sorted_lists;
 
+
+import leetcode.cn.linkedlist.ListNode;
 
 import java.util.Comparator;
 import java.util.PriorityQueue;

@@ -1,5 +1,6 @@
-package leetcode.cn.merge_k_sorted_lists;
+package leetcode.cn.linkedlist.merge_k_sorted_lists;
 
+import leetcode.cn.linkedlist.ListNode;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
