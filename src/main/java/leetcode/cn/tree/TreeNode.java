@@ -8,7 +8,7 @@ public class TreeNode {
     TreeNode() {
     }
 
-    TreeNode(int val) {
+    public TreeNode(int val) {
         this.val = val;
     }
 
@@ -16,5 +16,20 @@ public class TreeNode {
         this.val = val;
         this.left = left;
         this.right = right;
+    }
+
+    @Override
+    public int hashCode() {
+        return val;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        return ((TreeNode) obj).val == val;
+    }
+
+    @Override
+    public String toString() {
+        return "Tree-" + val;
     }
 }
