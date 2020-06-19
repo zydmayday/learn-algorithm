@@ -1,5 +1,6 @@
 package leetcode;
 
+import leetcode.en.PatitionArrayIntoDisjointIntervals;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;

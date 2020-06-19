@@ -1,8 +1,6 @@
-package leetcode;
+package leetcode.en;
 
 import java.util.Arrays;
-import java.util.HashMap;
-import java.util.Map;
 
 // https://leetcode.com/problems/palindrome-partitioning-ii/
 // hard

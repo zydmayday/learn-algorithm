@@ -1,4 +1,4 @@
-package leetcode;
+package leetcode.en;
 
 import java.util.List;
 import java.util.stream.Collectors;

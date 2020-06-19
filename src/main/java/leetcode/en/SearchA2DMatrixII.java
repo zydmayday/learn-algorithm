@@ -1,4 +1,4 @@
-package leetcode;
+package leetcode.en;
 
 // https://leetcode.com/problems/search-a-2d-matrix-ii/
 public class SearchA2DMatrixII {

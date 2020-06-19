@@ -1,4 +1,4 @@
-package leetcode;
+package leetcode.en;
 
 // https://leetcode.com/problems/partition-array-into-disjoint-intervals/
 public class PatitionArrayIntoDisjointIntervals {

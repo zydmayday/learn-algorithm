@@ -1,4 +1,4 @@
-package leetcode;
+package leetcode.en;
 
 // https://leetcode.com/problems/valid-palindrome-ii/
 public class ValidPalindromeII {
